@@ -37,4 +37,7 @@
 // 	textNode.nodeValue = v;
 // }
 
-document.body.innerHTML = document.body.innerHTML.replace(/Game of Thrones/g, 'Game of Bones'); 
+	alert('Hello')
+	console.log(document.body.innerHTML)
+	document.body.innerHTML = document.body.innerHTML.replace(/Game of Thrones/g, 'Game of Bones'); 
+
