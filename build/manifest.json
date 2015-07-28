@@ -9,11 +9,16 @@
     "default_icon": "icon.png",
     "default_popup": "popup.html"
   },
+  "background":
+  {
+    "scripts": ["jquery-2.1.4.min.js", "Replacement.js"],
+    "persistant": false
+  },
   "content_scripts": 
   [
     {
       "matches": ["*://*/*"],
-      "js": ["Replacement.js", "jquery-1.11.3.min.js"],
+      "js": ["Replacement.js", "jquery-2.1.4.min.js"],
       "run_at": "document_end"
       
     }
