@@ -2,7 +2,9 @@
   "manifest_version": 2,
 
   "name": "Spoiler alert",
-  "description": "This extension shows a Google Image search result for the current page",
+  "description": "Spoiler Alert is a useful extension which deletes all the spoilers from your favourite programs on all of your social Medias.
+This application will disable all the spoilers on every social media. All you have to do is pick the program you want to hide and pick the social media.   
+",
   "version": "1.0",
 
   "browser_action": {
