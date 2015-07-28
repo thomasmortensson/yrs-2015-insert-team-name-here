@@ -13,8 +13,9 @@
   [
     {
       "matches": ["*://*/*"],
-      "js": ["Replacement.js"],
+      "js": ["Replacement.js", "jquery.js"],
       "run_at": "document_end"
+      
     }
   ],
   "permissions": [
