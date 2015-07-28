@@ -11,7 +11,7 @@
   },
   "background":
   {
-    "scripts": ["thirdParty/jquery-2.1.4.js"]
+    "scripts": ["jquery-2.1.4.js"]
   },
   "content_scripts": 
   [
