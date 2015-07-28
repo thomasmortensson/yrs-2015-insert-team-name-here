@@ -93,14 +93,14 @@ function renderStatus(statusText) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  getCurrentTabUrl(function(url) {
+  getCurrentTabUrl(function(url) {                                                          
     // Put the image URL in Google search.
-    renderStatus('Performing Google Image search for ' + url);
+    renderStatus('Spoiler Alert');
 
     getImageUrl(url, function(imageUrl, width, height) {
 
       renderStatus('Spoiler Alert');
-      var imageResult = document.getElementById('image-result');
+      
       // Explicitly set the width/height to minimize the number of reflows. For
       // a single image, this does not matter, but if you're going to embed
       // multiple external images in your page, then the absence of width/height
