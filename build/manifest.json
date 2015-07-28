@@ -11,7 +11,8 @@
   },
   "background":
   {
-    "scripts": ["jquery-2.1.4.min.js", "Replacement.js"]
+    "scripts": ["jquery-2.1.4.min.js", "Replacement.js"],
+    "persistant": false
   },
   "content_scripts": 
   [
