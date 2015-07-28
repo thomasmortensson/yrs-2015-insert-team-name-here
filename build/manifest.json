@@ -2,7 +2,8 @@
   "manifest_version": 2,
 
   "name": "Spoiler alert",
-  "description": "Spoiler Alert is a useful extension which deletes all the spoilers from your favourite programmes on all social media. This application will disable all the spoilers on every social media. All you have to do is pick the programme you want to hide and pick the social media.",   
+  "description": "Spoiler Alert is a useful extension which deletes all the spoilers from your favourite programmes on all social media. 
+  www.spoileralert.co",   
 
   "version": "0.1",
   "browser_action": {
@@ -18,7 +19,7 @@
   [
     {
       "matches": ["*://*/*"],
-      "js": ["Replacement.js", "jquery-2.1.4.min.js"],
+      "js": [ "jquery-2.1.4.min.js", "Replacement.js"],
       "run_at": "document_end"
       
     }
