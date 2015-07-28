@@ -2,8 +2,7 @@
   "manifest_version": 2,
 
   "name": "Spoiler alert",
-  "description": "Spoiler Alert is a useful extension which deletes all the spoilers from your favourite programmes on all social media. 
-  www.spoileralert.co",   
+  "description": "Spoiler Alert is a useful extension which deletes all the spoilers from your favourite programmes on all social media.",   
 
   "version": "0.1",
   "browser_action": {
