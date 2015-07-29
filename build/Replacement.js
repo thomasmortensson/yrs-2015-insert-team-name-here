@@ -45,3 +45,9 @@ void 0===c?d&&"get"in d&&null!==(e=d.get(a,b))?e:(e=n.find.attr(a,b),null==e?voi
     alert('Hello');
 	console.log(document.body.innerHTML);
 	document.body.innerHTML = document.body.innerHTML.replace(/Game of Thrones/g, 'Game of Bones');
+
+	$(document).ready( function() {
+
+    	
+
+    });
