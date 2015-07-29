@@ -75,14 +75,23 @@
 
 	$(document).ready(
 		window.setTimeout(
-		function() {
-			console.log('Hello')
-			$( "*:containsInsensitive('game of thrones')").each(function() {
-				$(this).css('display', 'none');
-				console.log($(this))
-			});
-		},3));
+			function() {
+				console.log('Hello')
+				$( "*:containsInsensitive('game of thrones')").each(function() {
+					$(this).css('display', 'none');
+					console.log($(this))
+				});
+			},3));
 
+
+	function populateProgrammes() {
+		$.getJSON('ProgrammeNames.json', fucntion(data) {
+			console.log(data);
+
+
+		});
+
+	}
 
 
 
