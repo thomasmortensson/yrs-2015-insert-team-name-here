@@ -4,21 +4,21 @@
   "name": "Spoiler alert",
   "description": "Spoiler Alert is a useful extension which deletes all the spoilers from your favourite programmes anywhere on the internet.",   
 
-  "version": "Alpha 0.1",
+  "version": "0.2",
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html"
   },
   "background":
   {
-    "scripts": ["jquery-2.1.4.min.js", "Replacement.js"],
+    "scripts": ["Replacement.js", "ProgrammeNames.json"],
     "persistant": false
   },
   "content_scripts": 
   [
     {
       "matches": ["*://*/*"],
-      "js": [ "jquery-2.1.4.min.js", "Replacement.js"],
+      "js": ["Replacement.js", "ProgrammeNames.json"],
       "run_at": "document_end"
       
     }

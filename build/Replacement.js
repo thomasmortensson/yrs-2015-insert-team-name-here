@@ -105,12 +105,30 @@
 
 
 
+    
 
 
+function buildCheckboxes() {
+	console.log("About to retrieve JSON");
+    $.getJSON('ProgrammeNames.json', function(data, status) {
+    	console.log(status);
+    	alert('Success');
+    	for(var k in data) {
+    		var row = document.createElement('tr');
+    		var show = document.createElement('td');
+    		var checkboxColumn = document.createElement('td');
+    		var checkbox = document.createElement('input');
+    		checkbox.type = 'checkbox';
+    		checkboxColumn.appendChild(checkbox);
+    		row.appendChild(show);
+    		row.appendChild(checkboxColumn);
+    		document.getElementById('tableId').appendChild(row);
 
+    	}
+    });
+}
 
-
-
+buildCheckboxes();
 
 
 
