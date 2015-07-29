@@ -103,24 +103,40 @@
 			}, 3));
 
 
+var programList = {};
 
+// function toggleVar(element) {
+// 	console.log(element);
+// }
+
+var shows = {};
 
 function buildCheckboxes() {
 	console.log("About to retrieve JSON");
     $.getJSON('http://spoiler-alert.co.uk/ProgrammeNames.json', function(data, status) {
+    	programList = data;
     	console.log(status);
     	//alert('Success');
     	for(var k in data) {
+    		shows[k] = true;
     		var row = document.createElement('tr');
     		var show = document.createElement('td');
     		show.innerHTML = k;
     		var checkboxColumn = document.createElement('td');
     		var checkbox = document.createElement('input');
     		checkbox.type = 'checkbox';
+    		checkbox.checked = true;
+    		checkbox.addEventListener("click", function(){
+				shows[k] = !shows[k];
+			});
     		checkboxColumn.appendChild(checkbox);
     		row.appendChild(show);
     		row.appendChild(checkboxColumn);
     		document.getElementById('tableId').appendChild(row);
+
+    		// for(box in boxes) {
+    		// 	box.click(toggleVar(this));
+    		// }
 
     	}
     });
