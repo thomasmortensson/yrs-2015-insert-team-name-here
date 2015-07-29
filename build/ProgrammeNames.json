@@ -33,7 +33,7 @@
         "Frank underwood security",
         "Oliver spence",
         "Pollster",
-        "Underwood Secret service",
+        "Underwood Secret service"
     ],
     "Game of thrones": [
         "Daenerys Targaryen",
@@ -137,7 +137,7 @@
         "John Diggle",
         "Detective Quentin Lance",
         "Tommy Merlyn",
-        "Arrow",
+        "Arrow"
     ],
 
     "Daredevil": [
@@ -184,7 +184,7 @@
     "Priya KoothRappali",
     "Bernadette Rostenkowski",
     "MrsKoothrappali",
-    "Stuart Bloom",
+    "Stuart Bloom"
     ],
     "Breaking Bad": [
     "Walter White ",
@@ -201,7 +201,7 @@
     "Bogdan Wolynetz",
     "Todd Alquist",
     "Lydia Rodarte-Quayle",
-    "Tuco Salamanca",
+    "Tuco Salamanca"
 ],
     "Pretty Little Liars": [
     "Alison Dilaurentis",
@@ -238,5 +238,5 @@
     "Garret Reynolds",
     "Anne Sullivan",
     "Peter Hastings"
-],
+]
 }
