@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
     getImageUrl(url, function(imageUrl, width, height) {
 
       renderStatus('Spoiler Alert');
-      
+      var imageResult = {};
       // Explicitly set the width/height to minimize the number of reflows. For
       // a single image, this does not matter, but if you're going to embed
       // multiple external images in your page, then the absence of width/height

@@ -48,6 +48,6 @@ void 0===c?d&&"get"in d&&null!==(e=d.get(a,b))?e:(e=n.find.attr(a,b),null==e?voi
 
 	$(document).ready( function() {
 
-    	
+    	$( "div:contains('Game of Thrones')" ).remove();
 
     });
