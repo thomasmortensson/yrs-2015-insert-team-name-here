@@ -73,25 +73,34 @@
 		}
 	});
 
+	function hideElement(element) {
+		element.css('display', 'none');
+		console.log(element)
+
+	}
+
+	function hideElementsContainingText(matchingText) {
+		$( "*:containsInsensitive(" +matchingText+")").each(function() {
+			hideElement($(this))
+		});
+	}
+
+
+	function hideElementsContainingNames() {
+		$.getJSON('ProgrammeNames.json', function(data) {
+			$.each(data, function(name){
+			hideElementsContainingText(name)
+			});
+		});
+	}
+
 	$(document).ready(
 		window.setTimeout(
 			function() {
 				console.log('Hello')
-				$( "*:containsInsensitive('game of thrones')").each(function() {
-					$(this).css('display', 'none');
-					console.log($(this))
-				});
-			},3));
+				hideElementsContainingNames()
+			}, 3));
 
-
-	function populateProgrammes() {
-		$.getJSON('ProgrammeNames.json', fucntion(data) {
-			console.log(data);
-
-
-		});
-
-	}
 
 
 
