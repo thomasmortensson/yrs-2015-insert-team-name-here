@@ -126,9 +126,13 @@ function buildCheckboxes() {
     		var checkbox = document.createElement('input');
     		checkbox.type = 'checkbox';
     		checkbox.checked = true;
-    		checkbox.addEventListener("click", function(){
-				shows[k] = !shows[k];
-			});
+    		checkbox.id = k;
+    		checkbox.addEventListener("click",  function(num) { 
+    			return function() { 
+    				shows[num] = !shows[num]; 
+    			} 
+    		} (checkbox.id));
+
     		checkboxColumn.appendChild(checkbox);
     		row.appendChild(show);
     		row.appendChild(checkboxColumn);
