@@ -105,9 +105,6 @@
 
 
 
-    
-
-
 function buildCheckboxes() {
 	console.log("About to retrieve JSON");
     $.getJSON('ProgrammeNames.json', function(data, status) {
@@ -129,6 +126,7 @@ function buildCheckboxes() {
 }
 
 buildCheckboxes();
+
 
 
 
