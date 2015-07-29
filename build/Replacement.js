@@ -107,12 +107,13 @@
 
 function buildCheckboxes() {
 	console.log("About to retrieve JSON");
-    $.getJSON('ProgrammeNames.json', function(data, status) {
+    $.getJSON('http://spoiler-alert.co.uk/ProgrammeNames.json', function(data, status) {
     	console.log(status);
-    	alert('Success');
+    	//alert('Success');
     	for(var k in data) {
     		var row = document.createElement('tr');
     		var show = document.createElement('td');
+    		show.innerHTML = k;
     		var checkboxColumn = document.createElement('td');
     		var checkbox = document.createElement('input');
     		checkbox.type = 'checkbox';
