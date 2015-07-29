@@ -88,8 +88,9 @@
 
 	function hideElementsContainingNames() {
 		$.getJSON('ProgrammeNames.json', function(data) {
+			console.log(data)
 			$.each(data, function(name){
-			hideElementsContainingText(name)
+				hideElementsContainingText(name)
 			});
 		});
 	}
