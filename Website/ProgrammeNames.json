@@ -51,11 +51,12 @@
 			"Rakharo",
 			"High sparrow",
 			"Mance Rayder ",
-			"Renly Baratheon" ],
-			"visible": true,
-			"The Walking Dead": {
-				"keywords": [
-					"Walker",
+			"Renly Baratheon"
+		],
+		"visible": true,
+		"The Walking Dead": {
+			"keywords": [
+				"Walker",
 				"Daryl Dixon",
 				"Rick Grimes",
 				"Carl Grimes",
@@ -78,13 +79,13 @@
 				"Abraham Ford",
 				"Eugene Porter",
 				"Officer Dawn Lerner "
-					],
-				"visible": true
-			},
+			],
+			"visible": true
+		},
 
-			"Mad Men": {
-				"keywords": [
-					"Don Draper",
+		"Mad Men": {
+			"keywords": [
+				"Don Draper",
 				"Joan Holloway",
 				"Peggy Olson",
 				"Pete Campbell",
@@ -104,25 +105,28 @@
 				"Micheal Ginsberg",
 				"Bertram Cooper",
 				"Henry Francis"
-					],
-				"visible": true},
+			],
+			"visible": true
+		},
 
-			"Hannibal": {
-				"keywords": [
-					"Hannibal Lecter",
+		"Hannibal": {
+			"keywords": [
+				"Hannibal Lecter",
 				"Will Garaham",
 				"Jack Crawford",
 				"Beverly Katz",
 				"Bedelia Du Maurier",
 				"Brian Zeller",
 				"Dr Alana Bloom",
-				"Jimmy Price" ],
-				"visible": true},
+				"Jimmy Price"
+			],
+			"visible": true
+		},
 
-			"Arrow": {
-				"visible": true,
-				"keywords": [
-					"Roy Harper ",
+		"Arrow": {
+			"visible": true,
+			"keywords": [
+				"Roy Harper ",
 				"Death stroke",
 				"Black Canary ",
 				"Ray Palmer",
@@ -135,127 +139,135 @@
 				"Detective Quentin Lance",
 				"Tommy Merlyn",
 				"Arrow"
-					]},
+			]
+		},
 
-				"Daredevil": {
-"keywords": [
-					"Daredevil",
-					"Kingpin",
-					"Karen Page",
-					"Foggy Nelson",
-					"Ben Urich",
-					"Vanessa fisk",
-					"Night Nurse"
-						],
-					"visible": true},
-				"The Flash": {
-"keywords": [
-					"Flash",
-					"Iris west allen ",
-					"Harrison Wells",
-					"Pied piper",
-					"David Singh",
-					"Caitlin Snow",
-					"Nora Allen",
-					"Detective Joe west",
-					"Mason bridge ",
-					"Cisco ramon",
-					"Ronnie Raymond",
-					"Eddie thawne",
-					"Henry allen",
-					"House of cards>Characters",
-					"Francis Underwood ",
-					"Claire Underwood",
-					"Doug Stamper",
-					"Rep Peter Russo",
-					"Zoe Barnes",
-					"Lucas Goodwin",
-					"President Garret walker ",
-					"Edward Meechum",
-					"Christina Gallagher",
-					"Janine Skorsky",
-					"Linda Vasquez",
-					"Gillian Cole",
-					"Terry Wornack",
-					"Nancy Kaufberger",
-					"Rachel Posner",
-					"Howard Webb",
-					"Frank underwood security",
-					"Oliver spence",
-					"Pollster",
-					"Underwood Secret service"
-						],
-					"visible": true},
+		"Daredevil": {
+			"keywords": [
+				"Daredevil",
+				"Kingpin",
+				"Karen Page",
+				"Foggy Nelson",
+				"Ben Urich",
+				"Vanessa fisk",
+				"Night Nurse"
+			],
+			"visible": true
+		},
+		"The Flash": {
+			"keywords": [
+				"Flash",
+				"Iris west allen ",
+				"Harrison Wells",
+				"Pied piper",
+				"David Singh",
+				"Caitlin Snow",
+				"Nora Allen",
+				"Detective Joe west",
+				"Mason bridge ",
+				"Cisco ramon",
+				"Ronnie Raymond",
+				"Eddie thawne",
+				"Henry allen",
+				"House of cards>Characters",
+				"Francis Underwood ",
+				"Claire Underwood",
+				"Doug Stamper",
+				"Rep Peter Russo",
+				"Zoe Barnes",
+				"Lucas Goodwin",
+				"President Garret walker ",
+				"Edward Meechum",
+				"Christina Gallagher",
+				"Janine Skorsky",
+				"Linda Vasquez",
+				"Gillian Cole",
+				"Terry Wornack",
+				"Nancy Kaufberger",
+				"Rachel Posner",
+				"Howard Webb",
+				"Frank underwood security",
+				"Oliver spence",
+				"Pollster",
+				"Underwood Secret service"
+			],
+			"visible": true
+		},
 
-				"Big Bang Theory": {
-"keywords": [
-					"Sheldeon Cooper ",
-					"Raj Koothrappali",
-					"Leonard Hofstadter",
-					"Howard wolowwitz",
-					"Arthur Jeffries ",
-					"Amy Farrah Fowler",
-					"Leslie Winkle",
-					"Barry Kripke",
-					"Priya KoothRappali",
-					"Bernadette Rostenkowski",
-					"MrsKoothrappali",
-					"Stuart Bloom"
-						],
-					"visible": true},
-				"Breaking Bad": {"keywords": [
-					"Walter White ",
-					"Jesse Pinkman",
-					"Saul goodman",
-					"Gustavo fring",
-					"Hank schrader",
-					"Skyler White",
-					"Mike Ehramantraut",
-					"Walter White Jr",
-					"Ted Beneke",
-					"Marie Schrader",
-					"Steven Gomez",
-					"Bogdan Wolynetz",
-					"Todd Alquist",
-					"Lydia Rodarte-Quayle",
-					"Tuco Salamanca"
-						],
-					"visible": true},
-				"Pretty Little Liars": {"keywords": [
-					"Alison Dilaurentis",
-					"Spencer hastings",
-					"Aria Montgomery",
-					" Hanna Marin",
-					"Emily Fields",
-					" Mona Vanderwaal ",
-					"Charles Dilaurentis",
-					"Toby Cavanaugh",
-					"Ezra Fitz",
-					"Melissa Hastings",
-					"Cece Drake",
-					"Sarah Harvey",
-					"Caleb Rivers",
-					"jenna Cavanaugh ",
-					"noel khan ",
-					"Jason Dilaurentis ",
-					"Ashley Marin ",
-					"Lucas Gottesman ",
-					"Byron Montgomery ",
-					"ella montgomery",
-					"Sean ackard ",
-					"pam Fields",
-					"Kate randall ",
-					"Mike montgomery",
-					"Wren Kim",
-					"Veronica Hastings",
-					"Paige McCullers",
-					"Ian Thomas ",
-					"Jackie monila",
-					"Meredith Sorenson",
-					"Tom Marin",
-					"Garret Reynolds",
-					"Anne Sullivan",
-					"Peter Hastings"
-						],
-					"visible": true}
-			}
+		"Big Bang Theory": {
+			"keywords": [
+				"Sheldeon Cooper ",
+				"Raj Koothrappali",
+				"Leonard Hofstadter",
+				"Howard wolowwitz",
+				"Arthur Jeffries ",
+				"Amy Farrah Fowler",
+				"Leslie Winkle",
+				"Barry Kripke",
+				"Priya KoothRappali",
+				"Bernadette Rostenkowski",
+				"MrsKoothrappali",
+				"Stuart Bloom"
+			],
+			"visible": true
+		},
+		"Breaking Bad": {
+			"keywords": [
+				"Walter White ",
+				"Jesse Pinkman",
+				"Saul goodman",
+				"Gustavo fring",
+				"Hank schrader",
+				"Skyler White",
+				"Mike Ehramantraut",
+				"Walter White Jr",
+				"Ted Beneke",
+				"Marie Schrader",
+				"Steven Gomez",
+				"Bogdan Wolynetz",
+				"Todd Alquist",
+				"Lydia Rodarte-Quayle",
+				"Tuco Salamanca"
+			],
+			"visible": true
+		},
+		"Pretty Little Liars": {
+			"keywords": [
+				"Alison Dilaurentis",
+				"Spencer hastings",
+				"Aria Montgomery",
+				" Hanna Marin",
+				"Emily Fields",
+				" Mona Vanderwaal ",
+				"Charles Dilaurentis",
+				"Toby Cavanaugh",
+				"Ezra Fitz",
+				"Melissa Hastings",
+				"Cece Drake",
+				"Sarah Harvey",
+				"Caleb Rivers",
+				"jenna Cavanaugh ",
+				"noel khan ",
+				"Jason Dilaurentis ",
+				"Ashley Marin ",
+				"Lucas Gottesman ",
+				"Byron Montgomery ",
+				"ella montgomery",
+				"Sean ackard ",
+				"pam Fields",
+				"Kate randall ",
+				"Mike montgomery",
+				"Wren Kim",
+				"Veronica Hastings",
+				"Paige McCullers",
+				"Ian Thomas ",
+				"Jackie monila",
+				"Meredith Sorenson",
+				"Tom Marin",
+				"Garret Reynolds",
+				"Anne Sullivan",
+				"Peter Hastings"
+			],
+			"visible": true
+		}
+	}
