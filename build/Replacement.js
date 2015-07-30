@@ -105,11 +105,15 @@
 			}, 3));
 
 function hideElements() {
-	console.log("In hide elements");
+	//console.log("In hide elements");
 	for(element in programmeList) {
-		var checked = (localStorage.getItem(element) == "0") ? false : true;
-		if(checked) {
-    		console.log(element);		
+		if(localStorage.getItem(element) != null) { 
+			var checked = (localStorage.getItem(element) == "0") ? false : true;
+			if(checked) {
+	    		for(key_id in programmeList[element]) {
+	    			console.log(programmeList[element][key_id]);
+	    		}	
+	    	}
     	}
 	}
 
