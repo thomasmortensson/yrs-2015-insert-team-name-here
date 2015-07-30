@@ -1,9 +1,8 @@
 $.expr[':'].containsInsensitive = $.expr.createPseudo(function(matchingText) {
 	return function(element) {
-		if($(element).text().toLowerCase().replace(' ', '').search(matchingText.replace(' ', '')) !== -1) {
-			console.log($(element).text());
-		}
-		return $(element).text().toLowerCase().replace(' ', '').search(matchingText.replace(' ', '')) !== -1
+		if($(element).text() == null) return false;
+		console.log($(element).text().toLowerCase().replace(' ', '') + " - " + matchingText.toLowerCase().replace(' ', ''));
+		return $(element).text().toLowerCase().replace(' ', '').search(matchingText.toLowerCase().replace(' ', '')) !== -1
 	}
 });
 
@@ -34,9 +33,7 @@ function hideSelectedShows() {
     });
 }
 
-console.log("Hiding shows");
-
 $(document).ready(function() {
 	hideSelectedShows();
-	console.log("Hiding shows");
+	// console.log("Hiding shows");
 });
