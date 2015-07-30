@@ -3103,7 +3103,6 @@ $.expr[':'].containsInsensitive = $.expr.createPseudo(function(matchingText) {
 
 function hideElement(element) {
 	element.css('display', 'none');
-	console.log(element)
 }
 
 function hideElementsContainingText(matchingText) {
@@ -3144,7 +3143,6 @@ function buildCheckboxes() {
 			checkboxColumn.appendChild(checkbox);
 			row.appendChild(show);
 			row.appendChild(checkboxColumn);
-			console.log(document.getElementById('show-list'))
 			document.getElementById('show-list').appendChild(row);
 
 			// for(box in boxes) {
@@ -3155,9 +3153,10 @@ function buildCheckboxes() {
 	});
 
 }
+
 $(document).ready(function() {
 
-	buildCheckboxes();
+	// buildCheckboxes();
 
 	var programmeList = {};
 
