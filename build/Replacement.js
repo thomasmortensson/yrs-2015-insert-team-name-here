@@ -3111,77 +3111,35 @@ function hideElementsContainingText(matchingText) {
 	});
 }
 
-
-
-function buildCheckboxes() {
-	$.getJSON('http://spoiler-alert.co.uk/ProgrammeNames.json', function(data) {
-		programmeList = data;
-
-		//alert('Success');
-		for (var k in data) {
-
-			if (localStorage.getItem(k) == null) {
-				localStorage.setItem(k, "0");
-			}
-			//shows[k] = true;
-			var row = document.createElement('tr');
-			var show = document.createElement('td');
-			show.innerHTML = k;
-			var checkboxColumn = document.createElement('td');
-			var checkbox = document.createElement('input');
-			checkbox.type = 'checkbox';
-			var checkboxChecked = (localStorage.getItem(k) == "0") ? false : true;
-			checkbox.checked = checkboxChecked;
-			checkbox.id = k;
-			checkbox.addEventListener("click", function(showId) {
-				return function() {
-					var checked = (localStorage.getItem(showId) == "0") ? "1" : "0";
-					localStorage.setItem(showId, checked);
-				}
-			}(checkbox.id));
-
-			checkboxColumn.appendChild(checkbox);
-			row.appendChild(show);
-			row.appendChild(checkboxColumn);
-			document.getElementById('show-list').appendChild(row);
-
-			// for(box in boxes) {
-			// 	box.click(toggleVar(this));
-			// }
-
-		}
-	});
-
-}
-
-$(document).ready(function() {
-
-	// buildCheckboxes();
-
-	var programmeList = {};
-
-
-	window.setTimeout(
-		function() {
-			hideElements();
-		}, 3);
-
-	function hideElements() {
-		//console.log("In hide elements");
-		for (element in programmeList) {
-			if (localStorage.getItem(element) != null) {
-				var checked = (localStorage.getItem(element) == "0") ? false : true;
-				if (checked) {
-					var show = programmeList[element]
-						//console.log(show)
-					for (keyword_id in show) {
-						var keyword = show[keyword_id];
-						// Add in remove on below keyword
-						console.log(keyword);
-						hideElementsContainingText(keyword)
-					}
+function hideElements(programmeList) {
+	console.log(programmeList);
+	for (show in programmeList) {
+		if (localStorage.getItem(show) != null) {
+			var checked = (localStorage.getItem(show) == "0") ? false : true;
+			if (checked) {
+				var show = programmeList[show]
+				console.log(show)
+				for (keyword_id in show) {
+					var keyword = show[keyword_id];
+					// Add in remove on below keyword
+					console.log(keyword);
+					hideElementsContainingText(keyword)
 				}
 			}
 		}
 	}
+}
+
+function hideSelectedShows() {
+	$.getJSON('http://spoiler-alert.co.uk/ProgrammeNames.json', function(data) {
+		var programmeList = data;
+		window.setTimeout(
+			function() {
+				hideElements(programmeList);
+			}, 3);
+	});
+}
+
+$(document).ready(function() {
+	hideSelectedShows()
 });

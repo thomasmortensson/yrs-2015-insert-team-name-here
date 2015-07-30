@@ -116,45 +116,63 @@
 //   });
 // });
 
-function buildCheckboxes() {
-  $.getJSON('http://spoiler-alert.co.uk/ProgrammeNames.json', function(data) {
-    programmeList = data;
+function store(key, value) {
+  var savedObj = {}
+  savedObj[key] = value
+  chrome.storage.local.set(savedObj)
+}
 
-    //alert('Success');
-    for (var k in data) {
-
-      if (localStorage.getItem(k) == null) {
-        localStorage.setItem(k, "0");
-      }
-      //shows[k] = true;
-      var row = document.createElement('tr');
-      var show = document.createElement('td');
-      show.innerHTML = k;
-      var checkboxColumn = document.createElement('td');
-      var checkbox = document.createElement('input');
-      checkbox.type = 'checkbox';
-      var checkboxChecked = (localStorage.getItem(k) == "0") ? false : true;
-      checkbox.checked = checkboxChecked;
-      checkbox.id = k;
-      checkbox.addEventListener("click", function(showId) {
-        return function() {
-          var checked = (localStorage.getItem(showId) == "0") ? "1" : "0";
-          localStorage.setItem(showId, checked);
-        }
-      }(checkbox.id));
-
-      checkboxColumn.appendChild(checkbox);
-      row.appendChild(show);
-      row.appendChild(checkboxColumn);
-      document.getElementById('show-list').appendChild(row);
-
-      // for(box in boxes) {
-      //  box.click(toggleVar(this));
-      // }
-
-    }
-  });
+function get(key, callback) {
+  chrome.storage.local.get(key, callback)
 
 }
 
-buildCheckboxes();
+function buildCheckboxes() {
+  $.getJSON('http://spoiler-alert.co.uk/ProgrammeNames.json', function(programmeList) {
+      //alert('Success');
+      for (var k in programmeList) {
+
+        get(k, function(items) {
+            var isShown = "0";
+            if (items.length == 0) {
+              store(k, isShown);
+            } else {
+              isShown = items[0];
+            }
+
+
+            //shows[k] = true;
+            var row = document.createElement('tr');
+            var show = document.createElement('td');
+            show.innerHTML = k;
+            var checkboxColumn = document.createElement('td');
+            var checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            var checkboxChecked = (isShown == "0") ? false : true;
+            checkbox.checked = checkboxChecked;
+            checkbox.id = k;
+            checkbox.addEventListener("click", function(showId) {
+                return function() {
+                  get(showId, function(items) {
+                      if (items[0] === null) {
+                        var checked = "0"
+                      }
+                      checked = items[0];
+                      store(showId, checked);
+                    }
+
+                  }
+                }(checkbox.id));
+
+              checkboxColumn.appendChild(checkbox); row.appendChild(show); row.appendChild(checkboxColumn); document.getElementById('show-list').appendChild(row);
+
+              // for(box in boxes) {
+              //  box.click(toggleVar(this));
+              // }
+            })
+        }
+      });
+
+  }
+
+  buildCheckboxes();
