@@ -3095,19 +3095,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 $.expr[':'].containsInsensitive = $.expr.createPseudo(function(matchingText) {
 	return function(element) {
 		return $(element).text().toLowerCase().replace(' ', '').search(matchingText.replace(' ', '')) !== -1
@@ -3126,14 +3113,6 @@ function hideElementsContainingText(matchingText) {
 }
 
 
-function hideElementsContainingNames() {
-	$.getJSON('http://spoiler-alert.co.uk/ProgrammeNames.json', function(data) {
-		//console.log(data)
-		$.each(data, function(name) {
-			hideElementsContainingText(name)
-		});
-	});
-}
 
 function buildCheckboxes() {
 	$.getJSON('http://spoiler-alert.co.uk/ProgrammeNames.json', function(data) {
@@ -3165,7 +3144,8 @@ function buildCheckboxes() {
 			checkboxColumn.appendChild(checkbox);
 			row.appendChild(show);
 			row.appendChild(checkboxColumn);
-			document.getElementById('tableId').appendChild(row);
+			console.log(document.getElementById('show-list'))
+			document.getElementById('show-list').appendChild(row);
 
 			// for(box in boxes) {
 			// 	box.click(toggleVar(this));
@@ -3175,34 +3155,34 @@ function buildCheckboxes() {
 	});
 
 }
-
-buildCheckboxes();
 $(document).ready(function() {
-			var programmeList = {};
 
-			
-			window.setTimeout(
-				function() {
-					hideElements();
-					hideElementsContainingNames();
-				}, 3);
+	buildCheckboxes();
 
-			function hideElements() {
-				//console.log("In hide elements");
-				for (element in programmeList) {
-					if (localStorage.getItem(element) != null) {
-						var checked = (localStorage.getItem(element) == "0") ? false : true;
-						if (checked) {
-							var show = programmeList[element]
-							//console.log(show)
-							for (keyword_id in show) {
-								var keyword = show[keyword_id];
-								// Add in remove on below keyword
-								console.log(keyword);
-								hideElementsContainingText(keyword)
-							}
-						}
+	var programmeList = {};
+
+
+	window.setTimeout(
+		function() {
+			hideElements();
+		}, 3);
+
+	function hideElements() {
+		//console.log("In hide elements");
+		for (element in programmeList) {
+			if (localStorage.getItem(element) != null) {
+				var checked = (localStorage.getItem(element) == "0") ? false : true;
+				if (checked) {
+					var show = programmeList[element]
+						//console.log(show)
+					for (keyword_id in show) {
+						var keyword = show[keyword_id];
+						// Add in remove on below keyword
+						console.log(keyword);
+						hideElementsContainingText(keyword)
 					}
 				}
 			}
-		});
+		}
+	}
+});
