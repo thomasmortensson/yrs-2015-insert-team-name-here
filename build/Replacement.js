@@ -111,12 +111,13 @@ function hideElements() {
 			var checked = (localStorage.getItem(element) == "0") ? false : true;
 			if(checked) {
 	    		for(key_id in programmeList[element]) {
-	    			console.log(programmeList[element][key_id]);
+	    			var keyword = programmeList[element][key_id];
+	    			// Add in remove on below keyword
+	    			console.log(keyword);
 	    		}	
 	    	}
     	}
 	}
-
 
 } 
 
