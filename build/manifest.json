@@ -11,14 +11,14 @@
   },
   "background":
   {
-    "scripts": ["Replacement.js", "ProgrammeNames.json"],
+    "scripts": ["Replacement.js"],
     "persistant": false
   },
   "content_scripts": 
   [
     {
       "matches": ["*://*/*"],
-      "js": ["Replacement.js", "ProgrammeNames.json"],
+      "js": ["Replacement.js"],
       "run_at": "document_end"
       
     }
