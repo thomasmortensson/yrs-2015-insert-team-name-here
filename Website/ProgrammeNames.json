@@ -53,7 +53,7 @@
 			"Mance Rayder ",
 			"Renly Baratheon"
 		],
-		"visible": true
+		"visible": false
 	},
 	"The Walking Dead": {
 		"keywords": [
@@ -81,7 +81,7 @@
 			"Eugene Porter",
 			"Officer Dawn Lerner "
 		],
-		"visible": true
+		"visible": false
 	},
 
 	"Mad Men": {
@@ -107,7 +107,7 @@
 			"Bertram Cooper",
 			"Henry Francis"
 		],
-		"visible": true
+		"visible": false
 	},
 
 	"Hannibal": {
@@ -121,11 +121,11 @@
 			"Dr Alana Bloom",
 			"Jimmy Price"
 		],
-		"visible": true
+		"visible": false
 	},
 
 	"Arrow": {
-		"visible": true,
+		"visible": false,
 		"keywords": [
 			"Roy Harper ",
 			"Death stroke",
@@ -153,7 +153,7 @@
 			"Vanessa fisk",
 			"Night Nurse"
 		],
-		"visible": true
+		"visible": false
 	},
 	"The Flash": {
 		"keywords": [
@@ -192,7 +192,7 @@
 			"Pollster",
 			"Underwood Secret service"
 		],
-		"visible": true
+		"visible": false
 	},
 
 	"Big Bang Theory": {
@@ -210,7 +210,7 @@
 			"MrsKoothrappali",
 			"Stuart Bloom"
 		],
-		"visible": true
+		"visible": false
 	},
 	"Breaking Bad": {
 		"keywords": [
@@ -230,7 +230,7 @@
 			"Lydia Rodarte-Quayle",
 			"Tuco Salamanca"
 		],
-		"visible": true
+		"visible": false
 	},
 	"Pretty Little Liars": {
 		"keywords": [
@@ -269,6 +269,6 @@
 			"Anne Sullivan",
 			"Peter Hastings"
 		],
-		"visible": true
+		"visible": false
 	}
 }
