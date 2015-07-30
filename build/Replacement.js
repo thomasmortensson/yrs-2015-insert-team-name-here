@@ -3166,6 +3166,7 @@ $(document).ready(function() {
 								var keyword = show[keyword_id];
 								// Add in remove on below keyword
 								console.log(keyword);
+								hideElementsContainingText(keyword)
 							}
 						}
 					}
