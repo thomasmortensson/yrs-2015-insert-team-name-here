@@ -1,3 +1,4 @@
+console.log($('stuff'));
 $.expr[':'].containsInsensitive = $.expr.createPseudo(function(matchingText) {
 	return function(element) {
 		return $(element).text().toLowerCase().replace(' ', '').search(matchingText.replace(' ', '')) !== -1
