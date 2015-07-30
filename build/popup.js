@@ -18,10 +18,10 @@ function initialiseDataStorage() {
   get('SpoilerAlert', function(spoilerAlert) {
     if ($.isEmptyObject(spoilerAlert)) {
       $.getJSON('http://spoiler-alert.co.uk/ProgrammeNames.json', function(programmeList) {
-        store({
-          'SpoilerAlert': programmeList
-        });
-      });
+          store({
+            'SpoilerAlert': programmeList
+          });
+          });
     }
   });
 }
@@ -44,8 +44,9 @@ function buildCheckboxes() {
         checkbox.id = showName;
 
         checkbox.addEventListener("click", function() {
-          programmeList[showName].visible = !visible;
-          store('SpoilerAlert', programmeList)
+          console.log(programmeList[showName]);
+          programmeList[showName].visible = !programmeList[showName].visible;
+          store(spoilerAlert);
         });
 
         checkboxColumn.appendChild(checkbox);
@@ -59,3 +60,5 @@ function buildCheckboxes() {
 
 initialiseDataStorage();
 buildCheckboxes();
+
+// vim: set sw=2 ts=2:
