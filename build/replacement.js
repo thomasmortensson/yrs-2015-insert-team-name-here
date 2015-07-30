@@ -1,4 +1,3 @@
-console.log($('stuff'));
 $.expr[':'].containsInsensitive = $.expr.createPseudo(function(matchingText) {
 	return function(element) {
 		return $(element).text().toLowerCase().replace(' ', '').search(matchingText.replace(' ', '')) !== -1
@@ -35,13 +34,18 @@ function hideElements(programmeList) {
 }
 
 function hideSelectedShows() {
-	$.getJSON('http://spoiler-alert.co.uk/ProgrammeNames.json', function(data) {
-		var programmeList = data;
-		window.setTimeout(
-			function() {
-				hideElements(programmeList);
-			}, 3);
-	});
+    get('SpoilerAlert', function(sp) {
+        var programmeList = sp.SpoilerAlert;
+        for (var _showName in programmeList) (function(showName) {
+            if (programmeList[showName].visible) {
+                var keywords = programmeList[showName].keywords;
+                for (var keyword in keywords) {
+                    hideElementsContainingText(keyword);
+                }
+            }
+        })(_showName);
+
+    });
 }
 
 $(document).ready(function() {
