@@ -1,5 +1,8 @@
 $.expr[':'].containsInsensitive = $.expr.createPseudo(function(matchingText) {
 	return function(element) {
+		if($(element).text().toLowerCase().replace(' ', '').search(matchingText.replace(' ', '')) !== -1) {
+			console.log($(element).text() + " - " + matchingText);
+		}
 		return $(element).text().toLowerCase().replace(' ', '').search(matchingText.replace(' ', '')) !== -1
 	}
 });
@@ -48,6 +51,9 @@ function hideSelectedShows() {
     });
 }
 
+console.log("Hiding shows");
+
 $(document).ready(function() {
-	hideSelectedShows()
+	hideSelectedShows();
+	console.log("Hiding shows");
 });
