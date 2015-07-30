@@ -25,6 +25,7 @@
   ],
   "permissions": [
     "activeTab",
+    "storage",
     "https://ajax.googleapis.com/",
     "http://spoiler-alert.co.uk/"
   ]

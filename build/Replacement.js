@@ -87,7 +87,7 @@
 
 
 	function hideElementsContainingNames() {
-		$.getJSON('ProgrammeNames.json', function(data) {
+		$.getJSON('http://spoiler-alert.co.uk/ProgrammeNames.json', function(data) {
 			console.log(data)
 			$.each(data, function(name){
 				hideElementsContainingText(name)
@@ -98,12 +98,15 @@
 	$(document).ready(
 		window.setTimeout(
 			function() {
-				console.log('Hello')
+				console.log('Hello World')
 				hideElementsContainingNames()
 			}, 3));
 
+function hideElements() {
 
-var programList = {};
+} 
+
+var programmeList = {};
 
 // function toggleVar(element) {
 // 	console.log(element);
@@ -114,22 +117,29 @@ var shows = {};
 function buildCheckboxes() {
 	console.log("About to retrieve JSON");
     $.getJSON('http://spoiler-alert.co.uk/ProgrammeNames.json', function(data, status) {
-    	programList = data;
+    	programmeList = data;
     	console.log(status);
+
     	//alert('Success');
     	for(var k in data) {
-    		shows[k] = true;
+    		console.log(localStorage.getItem(k));
+    		if(localStorage.getItem(k) == null) {
+    			localStorage.setItem(k, "0");
+    		}
+    		//shows[k] = true;
     		var row = document.createElement('tr');
     		var show = document.createElement('td');
     		show.innerHTML = k;
     		var checkboxColumn = document.createElement('td');
     		var checkbox = document.createElement('input');
     		checkbox.type = 'checkbox';
-    		checkbox.checked = true;
+    		var checkboxChecked =  (localStorage.getItem(k) == "0") ? false : true;
+    		checkbox.checked = checkboxChecked;
     		checkbox.id = k;
-    		checkbox.addEventListener("click",  function(num) { 
+    		checkbox.addEventListener("click",  function(showId) { 
     			return function() { 
-    				shows[num] = !shows[num]; 
+    				var checked = (localStorage.getItem(showId) == "0") ? "1" : "0";
+    				localStorage.setItem(showId, checked);
     			} 
     		} (checkbox.id));
 
