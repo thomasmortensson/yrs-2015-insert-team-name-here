@@ -13,7 +13,7 @@
   [
     {
       "matches": ["*://*/*"],
-      "js": ["Replacement.js"],
+      "js": ["jquery-2.1.4.min.js", "storage.js", "replacement.js"],
       "run_at": "document_end"
       
     }
