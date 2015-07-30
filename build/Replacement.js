@@ -88,41 +88,46 @@
 
 	function hideElementsContainingNames() {
 		$.getJSON('http://spoiler-alert.co.uk/ProgrammeNames.json', function(data) {
-			console.log(data)
+			//console.log(data)
 			$.each(data, function(name){
 				hideElementsContainingText(name)
 			});
 		});
 	}
 
+	buildCheckboxes();
+
 	$(document).ready(
 		window.setTimeout(
 			function() {
-				console.log('Hello World')
-				hideElementsContainingNames()
+				hideElements();
+				hideElementsContainingNames();
 			}, 3));
 
 function hideElements() {
+	console.log("In hide elements");
+	for(element in programmeList) {
+		var checked = (localStorage.getItem(element) == "0") ? false : true;
+		if(checked) {
+    		console.log(element);		
+    	}
+	}
+
 
 } 
 
 var programmeList = {};
 
-// function toggleVar(element) {
-// 	console.log(element);
-// }
 
-var shows = {};
+
 
 function buildCheckboxes() {
-	console.log("About to retrieve JSON");
-    $.getJSON('http://spoiler-alert.co.uk/ProgrammeNames.json', function(data, status) {
+    $.getJSON('http://spoiler-alert.co.uk/ProgrammeNames.json', function(data) {
     	programmeList = data;
-    	console.log(status);
 
     	//alert('Success');
     	for(var k in data) {
-    		console.log(localStorage.getItem(k));
+
     		if(localStorage.getItem(k) == null) {
     			localStorage.setItem(k, "0");
     		}
@@ -156,7 +161,7 @@ function buildCheckboxes() {
     });
 }
 
-buildCheckboxes();
+
 
 
 
