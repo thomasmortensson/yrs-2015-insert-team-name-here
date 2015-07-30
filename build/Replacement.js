@@ -3094,33 +3094,25 @@
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $.expr[':'].containsInsensitive = $.expr.createPseudo(function(matchingText) {
 	return function(element) {
 		return $(element).text().toLowerCase().replace(' ', '').search(matchingText.replace(' ', '')) !== -1
 	}
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function hideElement(element) {
 	element.css('display', 'none');
@@ -3143,11 +3135,52 @@ function hideElementsContainingNames() {
 	});
 }
 
+function buildCheckboxes() {
+	$.getJSON('http://spoiler-alert.co.uk/ProgrammeNames.json', function(data) {
+		programmeList = data;
 
+		//alert('Success');
+		for (var k in data) {
+
+			if (localStorage.getItem(k) == null) {
+				localStorage.setItem(k, "0");
+			}
+			//shows[k] = true;
+			var row = document.createElement('tr');
+			var show = document.createElement('td');
+			show.innerHTML = k;
+			var checkboxColumn = document.createElement('td');
+			var checkbox = document.createElement('input');
+			checkbox.type = 'checkbox';
+			var checkboxChecked = (localStorage.getItem(k) == "0") ? false : true;
+			checkbox.checked = checkboxChecked;
+			checkbox.id = k;
+			checkbox.addEventListener("click", function(showId) {
+				return function() {
+					var checked = (localStorage.getItem(showId) == "0") ? "1" : "0";
+					localStorage.setItem(showId, checked);
+				}
+			}(checkbox.id));
+
+			checkboxColumn.appendChild(checkbox);
+			row.appendChild(show);
+			row.appendChild(checkboxColumn);
+			document.getElementById('tableId').appendChild(row);
+
+			// for(box in boxes) {
+			// 	box.click(toggleVar(this));
+			// }
+
+		}
+	});
+
+}
+
+buildCheckboxes();
 $(document).ready(function() {
 			var programmeList = {};
 
-			buildCheckboxes();
+			
 			window.setTimeout(
 				function() {
 					hideElements();
@@ -3161,7 +3194,7 @@ $(document).ready(function() {
 						var checked = (localStorage.getItem(element) == "0") ? false : true;
 						if (checked) {
 							var show = programmeList[element]
-							console.log(show)
+							//console.log(show)
 							for (keyword_id in show) {
 								var keyword = show[keyword_id];
 								// Add in remove on below keyword
@@ -3171,48 +3204,5 @@ $(document).ready(function() {
 						}
 					}
 				}
-			}
-
-
-
-			function buildCheckboxes() {
-				$.getJSON('http://spoiler-alert.co.uk/ProgrammeNames.json', function(data) {
-					programmeList = data;
-
-					//alert('Success');
-					for (var k in data) {
-
-						if (localStorage.getItem(k) == null) {
-							localStorage.setItem(k, "0");
-						}
-						//shows[k] = true;
-						var row = document.createElement('tr');
-						var show = document.createElement('td');
-						show.innerHTML = k;
-						var checkboxColumn = document.createElement('td');
-						var checkbox = document.createElement('input');
-						checkbox.type = 'checkbox';
-						var checkboxChecked = (localStorage.getItem(k) == "0") ? false : true;
-						checkbox.checked = checkboxChecked;
-						checkbox.id = k;
-						checkbox.addEventListener("click", function(showId) {
-							return function() {
-								var checked = (localStorage.getItem(showId) == "0") ? "1" : "0";
-								localStorage.setItem(showId, checked);
-							}
-						}(checkbox.id));
-
-						checkboxColumn.appendChild(checkbox);
-						row.appendChild(show);
-						row.appendChild(checkboxColumn);
-						document.getElementById('tableId').appendChild(row);
-
-						// for(box in boxes) {
-						// 	box.click(toggleVar(this));
-						// }
-
-					}
-				});
-
 			}
 		});
