@@ -19,6 +19,7 @@ function initialiseDataStorage() {
 }
 
 function buildCheckboxes() {
+  // clean();
   get('SpoilerAlert', function(spoilerAlert) {
     var programmeList = spoilerAlert.SpoilerAlert;
     console.log(programmeList);
@@ -32,7 +33,7 @@ function buildCheckboxes() {
         var checkboxColumn = document.createElement('td');
         var checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
-        checkbox.checked = !visible;
+        checkbox.checked = visible;
         checkbox.id = showName;
 
         checkbox.addEventListener("click", function() {
